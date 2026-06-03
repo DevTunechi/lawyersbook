@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" width="400" height="80">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&amp;display=swap');
+      .law-light { font-family: 'Inter', sans-serif; font-weight: 300; fill: #1f2937; }
+      .law-bold { font-family: 'Inter', sans-serif; font-weight: 700; fill: #111827; }
+      .sub { font-family: 'Inter', sans-serif; font-weight: 500; fill: #b45309; letter-spacing: 2px; }
+    </style>
+  </defs>
+  <!-- Minimalist balance scale icon -->
+  <g transform="translate(10, 20)" stroke="#b45309" stroke-width="2" fill="none">
+    <line x1="20" y1="5" x2="20" y2="35" />
+    <line x1="5" y1="15" x2="35" y2="15" />
+    <path d="M5,15 L12,25 L20,15 L28,25 L35,15" />
+    <circle cx="20" cy="5" r="2" fill="#b45309" stroke="none" />
+  </g>
+  <!-- Text: Law Bookies Chamber -->
+  <text x="55" y="32" class="law-light" font-size="28">Law</text>
+  <text x="110" y="32" class="law-bold" font-size="28">Bookies</text>
+  <text x="215" y="32" class="law-light" font-size="16" fill="#6b7280" letter-spacing="1">Chamber</text>
+  <text x="55" y="55" class="sub" font-size="9">LEGAL COLLECTIVE</text>
+</svg>
