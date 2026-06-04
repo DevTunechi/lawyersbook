@@ -1,7 +1,14 @@
 {
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/admin", "destination": "/public/admin/index.html" },
-    { "source": "/admin/(.*)", "destination": "/public/admin/index.html" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/admin", "dest": "/public/admin/index.html" },
+    { "src": "/admin/(.*)", "dest": "/public/admin/index.html" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
