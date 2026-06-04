@@ -1,11 +1,15 @@
 {
-  "version": 2,
+  "functions": {
+    "**/*.html": { "runtime": "nodejs18.x" }
+  },
   "routes": [
+    { "src": "/admin", "dest": "/public/admin/index.html" },
+    { "src": "/admin/(.*)", "dest": "/public/admin/index.html" },
+    { "src": "/counselor.html", "dest": "/counselor.html" },
     { "src": "/data.js", "dest": "/data.js" },
     { "src": "/app.js", "dest": "/app.js" },
     { "src": "/logo.svg", "dest": "/logo.svg" },
-    { "src": "/admin", "dest": "/public/admin/index.html" },
-    { "src": "/admin/(.*)", "dest": "/public/admin/index.html" },
+    { "src": "/(.*)\\.(html|js|svg|json)", "dest": "/$1.$2" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
