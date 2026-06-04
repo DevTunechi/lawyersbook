@@ -1,14 +1,9 @@
-let currentFilter = 'all';
-
 function renderCounselors() {
     const grid = document.getElementById('counselor-grid');
     if (!grid) return;
-    let filtered = counselors.filter(c => c.isActive !== false);
-    if (currentFilter !== 'all') {
-        filtered = filtered.filter(c => c.practiceAreas.includes(currentFilter));
-    }
+    const filtered = counselors.filter(c => c.isActive !== false);
     if (filtered.length === 0) {
-        grid.innerHTML = '<p class="text-center text-gray-500 col-span-full">No counselors found for this practice area.</p>';
+        grid.innerHTML = '<p class="text-center text-gray-500 col-span-full">No counselors found.</p>';
         return;
     }
     grid.innerHTML = filtered.map(c => `
@@ -26,15 +21,16 @@ function loadCounselor() {
     const slug = urlParams.get('slug');
     const counselor = counselors.find(c => c.slug === slug && c.isActive !== false);
     const container = document.getElementById('profile-content');
-    if (!container) return;
+    if (!container) {
+        console.error("No #profile-content element found");
+        return;
+    }
     if (!counselor) {
         container.innerHTML = '<h1 class="text-center text-red-600">Counselor not found</h1>';
         return;
     }
     const whatsappUrl = `https://wa.me/${counselor.whatsappNumber.replace(/[^0-9+]/g, '')}?text=${encodeURIComponent(`Hello ${counselor.name}, I'm a potential client. I'd like to discuss a legal matter. Are you available for a quick chat?`)}`;
-    
     const verifiedBadge = `<span class="inline-flex items-center gap-1 bg-blue-500 text-white text-xs font-semibold px-2 py-0.5 rounded-full"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>Verified</span>`;
-    
     const notableCasesHtml = counselor.notableCases && counselor.notableCases.length > 0 ? `
         <div class="mt-4">
             <strong>Notable Cases & Past Wins:</strong>
@@ -43,7 +39,6 @@ function loadCounselor() {
             </ul>
         </div>
     ` : '';
-    
     container.innerHTML = `
         <div class="bg-white shadow rounded-lg p-6">
             <img src="${counselor.photoUrl}" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
@@ -70,46 +65,11 @@ function loadCounselor() {
     `;
 }
 
-// Practice area filter setup
-function setupFilter() {
-    const filterContainer = document.getElementById('filter-bar');
-    if (!filterContainer) return;
-    // Get unique practice areas from all active counselors
-    const allAreas = new Set();
-    counselors.forEach(c => {
-        if (c.isActive !== false) {
-            c.practiceAreas.forEach(area => allAreas.add(area));
-        }
-    });
-    const areas = Array.from(allAreas).sort();
-    const buttons = ['<button data-filter="all" class="filter-btn px-3 py-1 rounded-full text-sm font-medium bg-blue-600 text-white">All</button>'];
-    areas.forEach(area => {
-        buttons.push(`<button data-filter="${area}" class="filter-btn px-3 py-1 rounded-full text-sm font-medium bg-gray-200 text-gray-800 hover:bg-gray-300">${area}</button>`);
-    });
-    filterContainer.innerHTML = buttons.join('');
-    // Add event listeners
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const filter = btn.getAttribute('data-filter');
-            currentFilter = filter === 'all' ? 'all' : filter;
-            renderCounselors();
-            // Update active button style
-            document.querySelectorAll('.filter-btn').forEach(b => {
-                if (b.getAttribute('data-filter') === filter) {
-                    b.classList.remove('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
-                    b.classList.add('bg-blue-600', 'text-white');
-                } else {
-                    b.classList.remove('bg-blue-600', 'text-white');
-                    b.classList.add('bg-gray-200', 'text-gray-800', 'hover:bg-gray-300');
-                }
-            });
-        });
-    });
-}
-
-if (window.location.pathname.includes('counselor.html')) {
+// Determine which page we're on
+if (window.location.pathname.includes('/counselor.html')) {
     loadCounselor();
 } else if (document.getElementById('counselor-grid')) {
-    setupFilter();
     renderCounselors();
+} else {
+    console.log("Neither counselor nor home page detected.");
 }
