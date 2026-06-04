@@ -1,0 +1,86 @@
+[
+  {
+    "id": "1",
+    "slug": "pamela-bondi",
+    "name": "Pamela Bondi",
+    "photoUrl": "https://randomuser.me/api/portraits/women/68.jpg",
+    "bio": "Former Florida Attorney General (2011–2019). Lead Counsel at Law Bookies Chamber with over 25 years of experience in high-stakes litigation, white-collar defense, and government investigations.",
+    "practiceAreas": ["White Collar Defense", "Government Investigations", "Appellate Law"],
+    "barAdmissions": "Florida (1991), District of Columbia (1992)",
+    "whatsappNumber": "+18135551234",
+    "email": "pamela.bondi@lawbookies.com",
+    "yearsExperience": 33,
+    "languages": ["English"],
+    "locationCityState": "Tampa, FL",
+    "hourlyRate": "$1,250",
+    "notableCases": [
+      { "case": "Successfully defended a Fortune 500 CEO in a federal fraud investigation – no charges filed." },
+      { "case": "Led multi-state opioid settlement negotiations resulting in $26 billion recovery." }
+    ],
+    "isActive": true,
+    "order": 1
+  },
+  {
+    "id": "2",
+    "slug": "michael-sullivan",
+    "name": "Michael Sullivan",
+    "photoUrl": "https://randomuser.me/api/portraits/men/32.jpg",
+    "bio": "Former U.S. Attorney for the District of Massachusetts (2001–2009). Specializes in corporate compliance, health care fraud, and internal investigations.",
+    "practiceAreas": ["Corporate Compliance", "Health Care Fraud", "Internal Investigations"],
+    "barAdmissions": "Massachusetts (1988), New York (1989)",
+    "whatsappNumber": "+16175551234",
+    "email": "michael.sullivan@lawbookies.com",
+    "yearsExperience": 36,
+    "languages": ["English", "Spanish"],
+    "locationCityState": "Boston, MA",
+    "hourlyRate": "$1,100",
+    "notableCases": [
+      { "case": "Secured deferred prosecution agreement for a major pharmaceutical company – $0 fine." },
+      { "case": "Led internal investigation uncovering $200M fraud; client avoided indictment." }
+    ],
+    "isActive": true,
+    "order": 2
+  },
+  {
+    "id": "3",
+    "slug": "jennifer-chen",
+    "name": "Jennifer Chen",
+    "photoUrl": "https://randomuser.me/api/portraits/women/89.jpg",
+    "bio": "Partner-level family law attorney, recognized as a 'Super Lawyer' for 10 consecutive years. Handles complex divorce, child custody, and international family law matters.",
+    "practiceAreas": ["Family Law", "Divorce", "Child Custody", "International Family Law"],
+    "barAdmissions": "California (2001), New York (2003)",
+    "whatsappNumber": "+14155556789",
+    "email": "jennifer.chen@lawbookies.com",
+    "yearsExperience": 23,
+    "languages": ["English", "Mandarin"],
+    "locationCityState": "Los Angeles, CA",
+    "hourlyRate": "$950",
+    "notableCases": [
+      { "case": "Won $45 million divorce settlement – largest in county history." },
+      { "case": "Successfully relocated child to China under Hague Convention defense." }
+    ],
+    "isActive": true,
+    "order": 3
+  },
+  {
+    "id": "4",
+    "slug": "david-okonkwo",
+    "name": "David Okonkwo",
+    "photoUrl": "https://randomuser.me/api/portraits/men/45.jpg",
+    "bio": "Corporate litigation partner with a focus on shareholder disputes, securities fraud, and antitrust class actions. Frequent lecturer at Columbia Law.",
+    "practiceAreas": ["Corporate Litigation", "Securities Fraud", "Antitrust"],
+    "barAdmissions": "New York (2006), Delaware (2007)",
+    "whatsappNumber": "+12125559876",
+    "email": "david.okonkwo@lawbookies.com",
+    "yearsExperience": 18,
+    "languages": ["English", "Igbo"],
+    "locationCityState": "New York, NY",
+    "hourlyRate": "$1,050",
+    "notableCases": [
+      { "case": "Obtained $112 million jury verdict in shareholder derivative action." },
+      { "case": "Defeated class certification in antitrust price-fixing case." }
+    ],
+    "isActive": true,
+    "order": 4
+  }
+]
