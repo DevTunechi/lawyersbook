@@ -1,3 +1,4 @@
+```js
 const counselors = [
     {
         id: "1",
@@ -58,5 +59,31 @@ const counselors = [
         languages: ["English", "Igbo"],
         locationCityState: "New York, NY",
         hourlyRate: "$1,050"
+    },
+    {
+        id: "5",
+        slug: "principal-attorney",
+        name: "Michael Keith Meeks",
+        photoUrl: "/public/logo1.jpg",
+        bio: "Corporate litigation partner with a focus on shareholder disputes, securities fraud, and antitrust class actions. Frequent lecturer at Columbia Law.",
+        practiceAreas: ["Corporate Litigation", "Securities Fraud", "Antitrust"],
+        barAdmissions: "New York (2006), Delaware (2007)",
+        whatsappNumber: "+13033832691",
+        email: "barristermeeks88@gmail.com",
+        yearsExperience: 18,
+        languages: ["English", "Igbo"],
+        locationCityState: "730 N Post Oak Rd, #120, Houston, TX 77024",
+        hourlyRate: "$850",
+        notableCases: [
+            {
+                case: "Obtained $92 million jury verdict in shareholder derivative action."
+            },
+            {
+                case: "Defeated class certification in proprietary estoppel case."
+            }
+        ],
+        isActive: true,
+        order: 5
     }
 ];
+```
