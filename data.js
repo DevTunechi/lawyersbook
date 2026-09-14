@@ -1,4 +1,3 @@
-```js
 const counselors = [
     {
         id: "1",
@@ -86,4 +85,3 @@ const counselors = [
         order: 5
     }
 ];
-```
