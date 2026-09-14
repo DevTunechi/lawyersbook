@@ -66,11 +66,11 @@ const counselors = [
         photoUrl: "/public/logo1.jpg",
         bio: "Corporate litigation partner with a focus on shareholder disputes, securities fraud, and antitrust class actions. Frequent lecturer at Columbia Law.",
         practiceAreas: ["Corporate Litigation", "Securities Fraud", "Antitrust"],
-        barAdmissions: "New York (2006), Delaware (2007)",
+        barAdmissions: "Texas (2006), Colorado (2007)",
         whatsappNumber: "+13033832691",
         email: "barristermeeks88@gmail.com",
         yearsExperience: 18,
-        languages: ["English", "Igbo"],
+        languages: ["English"],
         locationCityState: "730 N Post Oak Rd, #120, Houston, TX 77024",
         hourlyRate: "$850",
         notableCases: [
